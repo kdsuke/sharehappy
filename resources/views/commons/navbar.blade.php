@@ -14,7 +14,8 @@
                 <ul class="nav navbar-nav navbar-right">
                     @if (Auth::check())
                         <li>
-                            <a href="{{ route('items.create') }}"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                            <a href="{{ route('items.create') }}">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
                                 出品する
                             </a>
                         </li>
@@ -28,7 +29,8 @@
                                 {{ Auth::user()->name }}
                                 <span class="caret"></span>
                             </a>
-                            <ul class="dropdown-menu"><li>
+                            <ul class="dropdown-menu">
+                                <li>
                                     <a href="{{ route('users.show', Auth::user()->id) }}">マイページ</a>
                                 </li>
                                 <li>
@@ -47,7 +49,7 @@
                         <li><a href="{{ route('signup.get') }}">新規登録</a></li>
                         <li><a href="{{ route('login') }}">ログイン</a></li>
                     @endif
-                    </ul>
+                </ul>
             </div>
         </div>
     </nav>
